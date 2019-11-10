@@ -1,0 +1,242 @@
+# Linux Setup for Front-End Development
+
+Before start this guide check for updates
+```bash
+sudo apt-get update
+sudo apt-get dist-upgrade
+```
+
+## Content
+1. [Git](#git)
+  * [Install git](#install-git)
+  * [Configure git](#configure-git)
+1. [Google Chrome](#google-chrome)
+  * [Install Google Chrome](#install-google-chrome)
+  * [Log In Google Chrome](#log-in-google-chrome)
+1. [VS Code](#vs-code)
+  * [Install VS Code](#install-vs-code)
+  * [Configure VS Code](#configure-vs-code)
+  * [Install VS Code Extensions](#install-vs-code-extensions)
+1. [Nvm](#nvm)
+  * [Install Nvm](#install-nvm)
+  * [Install Node and Npm with Nvm](#install-node-and-npm-with-nvm)
+1. [Npm](#npm)
+  * [Configure Npm](#configure-npm)
+1. [Vpn](#vpn)
+  * [Install Openconnect](#install-openconnect)
+  * [Connect with Openconnect](#connect-with-openconnect)
+  * [Alias for Openconnect](#alias-for-openconnect)
+1. [Proxy](#proxy)
+  * [Setup Proxy](#setup-proxy)
+1. [Git Repository](#git-repository)
+  * [Create private/public keys for the git repository](#create-private/public-keys-for-the-git-repository)
+1. [Office Suite](#office-suite)
+  * [Install Office Suite](#install-office-suite)
+1. [Miscelaneous](#miscelaneous)
+  * [Create *Workspace* folder](#create-workspace-folder)
+  * [Show hidden files](#show-hidden-files)
+  * [Sort by type of file](#sort-by-type-of-file)
+  * [Allow large number of watchers](#allow-large-number-of-watchers)
+
+
+## Git
+### Install git
+```bash
+sudo apt-get install git
+```
+
+### Configure git
+```bash
+git config --global user.name "${USER}"
+git config --global user.email "${EMAIL}"
+git config --global core.autocrlf false
+```
+
+## Google Chrome
+### Install Google Chrome
+
+Go to [link](https://www.google.com/intl/es/chrome/)
+```
+https://www.google.com/intl/es/chrome/
+```
+
+### Log In Google Chrome
+
+Only if you want synchronize your bookmarks and extensions with other computers
+
+## VS Code
+### Install VS Code
+
+Go to [link](https://code.visualstudio.com/)
+```
+https://code.visualstudio.com/
+```
+
+### Configure VS Code
+
+Go to `File -> Preferences -> Settings -> {}` and replace it with:
+```json
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Monokai",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "window.zoomLevel": 1,
+    "eslint.autoFixOnSave": true,
+
+    "jenkins.pipeline.linter.connector.url": "https://jenkins.corp/pipeline-model-converter/validate", // Just a example URL
+    "jenkins.pipeline.linter.connector.user": "${USER}",
+    "jenkins.pipeline.linter.connector.pass": "${PASS}",
+}
+```
+
+Go to `File -> Preferences -> Keyboard Shortcuts -> {}` and replace it with:
+```json
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]
+```
+
+### Install VS Code Extensions
+
+- Color Highlight
+- EditorConfig for VS Code
+- ESLint
+- SVG Viewer
+- Jenkins Pipeline Linter Connector
+
+
+## Nvm
+### Install Nvm
+
+- Go to [link](https://github.com/nvm-sh/nvm)
+```
+https://github.com/nvm-sh/nvm
+```
+- In the step of installation copy the `wget` command, Example:
+```bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+```
+- Paste it in the console
+- Restart the console
+
+### Install Node and Npm with Nvm
+
+```bash
+nvm install ${NODE VERSION}
+```
+
+## Npm
+### Configure Npm
+
+- Open the console, `Ctrl + Alt + t`
+- Create the file `.npmrc` in `HOME`
+```bash
+touch .npmrc
+```
+- Add the configurations necessary for you, Example:
+```bash
+nano .npmrc
+```
+```
+# Proxy
+proxy=http://proxy.company.domain/index.pac
+https-proxy=http://proxy.company.domain/index.pac
+# Certificate Authority
+cafile=/certs/company.pem
+# Registry
+registry=https://nexus.company.domain/repository/npm-group/
+```
+
+## Vpn
+### Install Openconnect
+```bash
+sudo apt-get install openconnect
+```
+
+### Connect with Openconnect
+```bash
+sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}
+```
+### Alias for Openconnect
+Make alias of the command, so you don't have to type every time you want to connect to the vpn
+
+- Open the console, `Ctrl + Alt + t`
+- If the file `.bash_aliases` don't exists, create it
+```bash
+touch .bash_aliases
+```
+- Open `.bash_aliases`
+```bash
+nano .bash_aliases
+```
+- Paste the following:
+```bash
+alias myvpn='sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}'
+```
+- Save
+- The new alias don't will appear till the console is restarted
+
+## Proxy
+### Setup Proxy
+- Go to: `Settings -> Network -> Network Proxy`
+- Choose `Automatic` and type the proxy URL
+
+## Git Repository
+### Create private/public keys for the git repository
+
+```bash
+ssh-keygen -t ${PROTOCOL} -b ${BITS} -C "${EMAIL}"
+```
+
+## Office Suite
+### Install Office Suite
+```bash
+sudo apt install libreoffice
+```
+
+## Miscelaneous
+### Create *workspace* folder
+
+- Generelly created in `HOME`
+```
+mkdir workspace
+```
+- Is good to keep this folder sorted, one option is create subfolders with categories, as:
+```bash
+/workspace
+  /${MYSELF}
+  /company
+  /test
+```
+
+### Show hidden files
+
+- Make the file explorer show you the hidden files
+
+### Sort by type of file
+
+- Make the file explorer show the folders sorted by type of file
+
+### Allow large number of watchers
+
+- To see how much watchers per user are:
+```bash
+cat /proc/sys/fs/inotify/max_user_watches
+```
+- To set how much watchers per user:
+```bash
+sudo nano /etc/sysctl.conf
+# go to the line: fs.inotify.max_user_watches or go to the botton and type the number of watchers
+fs.inotify.max_user_watches=524288
+# save and load the value to make it effective
+sudo sysctl -p
+```
+
+
+// APT PROXY
+
