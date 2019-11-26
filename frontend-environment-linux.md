@@ -179,7 +179,7 @@ nano .bash_aliases
 alias myvpn='sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}'
 ```
 - Save
-- The new alias don't will appear till the console is restarted
+- The new alias will not appear till the console is restarted
 
 ## Proxy
 ### Setup Proxy
@@ -224,11 +224,11 @@ mkdir workspace
 
 ### Allow large number of watchers
 
-- To see how much watchers per user are:
+- To see how many watchers per user are:
 ```bash
 cat /proc/sys/fs/inotify/max_user_watches
 ```
-- To set how much watchers per user:
+- To set how many watchers per user:
 ```bash
 sudo nano /etc/sysctl.conf
 # go to the line: fs.inotify.max_user_watches or go to the botton and type the number of watchers
