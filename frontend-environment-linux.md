@@ -10,6 +10,7 @@ sudo apt-get dist-upgrade
 1. [Git](#git)
   * [Install git](#install-git)
   * [Configure git](#configure-git)
+  * [Show current branch in the terminal](#show-current-branch-in-the-terminal)
 1. [Google Chrome](#google-chrome)
   * [Install Google Chrome](#install-google-chrome)
   * [Log In Google Chrome](#log-in-google-chrome)
@@ -41,15 +42,31 @@ sudo apt-get dist-upgrade
 
 ## Git
 ### Install git
-```bash
+```shell
 sudo apt-get install git
 ```
 
 ### Configure git
-```bash
+```shell
 git config --global user.name "${USER}"
 git config --global user.email "${EMAIL}"
 git config --global core.autocrlf false
+```
+
+### Show current branch in the terminal
+
+Copy in the file `.bashrc` the next function, copy it before the line `if [ -n "$force_color_prompt" ]; then`
+
+```shell
+# add git branch if its present to PS1
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+```
+
+Replace the asignament of `PS1` by:
+```shell
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 ```
 
 ## Google Chrome
