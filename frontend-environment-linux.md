@@ -1,7 +1,7 @@
 # Linux Setup for Front-End Development
 
 Before start this guide check for updates
-```bash
+```shell
 sudo apt-get update
 sudo apt-get dist-upgrade
 ```
@@ -118,7 +118,7 @@ Go to `File -> Preferences -> Keyboard Shortcuts -> {}` and replace it with:
 https://github.com/nvm-sh/nvm
 ```
 - In the step of installation copy the `wget` command, Example:
-```bash
+```shell
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 - Paste it in the console
@@ -126,7 +126,7 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 ### Install Node and Npm with Nvm
 
-```bash
+```shell
 nvm install ${NODE VERSION}
 ```
 
@@ -135,11 +135,11 @@ nvm install ${NODE VERSION}
 
 - Open the console, `Ctrl + Alt + t`
 - Create the file `.npmrc` in `HOME`
-```bash
+```shell
 touch .npmrc
 ```
 - Add the configurations necessary for you, Example:
-```bash
+```shell
 nano .npmrc
 ```
 ```
@@ -154,12 +154,12 @@ registry=https://nexus.company.domain/repository/npm-group/
 
 ## Vpn
 ### Install Openconnect
-```bash
+```shell
 sudo apt-get install openconnect
 ```
 
 ### Connect with Openconnect
-```bash
+```shell
 sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}
 ```
 ### Alias for Openconnect
@@ -167,15 +167,15 @@ Make alias of the command, so you don't have to type every time you want to conn
 
 - Open the console, `Ctrl + Alt + t`
 - If the file `.bash_aliases` don't exists, create it
-```bash
+```shell
 touch .bash_aliases
 ```
 - Open `.bash_aliases`
-```bash
+```shell
 nano .bash_aliases
 ```
 - Paste the following:
-```bash
+```shell
 alias myvpn='sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}'
 ```
 - Save
@@ -189,13 +189,13 @@ alias myvpn='sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN 
 ## Git Repository
 ### Create private/public keys for the git repository
 
-```bash
+```shell
 ssh-keygen -t ${PROTOCOL} -b ${BITS} -C "${EMAIL}"
 ```
 
 ## Office Suite
 ### Install Office Suite
-```bash
+```shell
 sudo apt install libreoffice
 ```
 
@@ -207,7 +207,7 @@ sudo apt install libreoffice
 mkdir workspace
 ```
 - Is good to keep this folder sorted, one option is create subfolders with categories, as:
-```bash
+```shell
 /workspace
   /${MYSELF}
   /company
@@ -225,11 +225,11 @@ mkdir workspace
 ### Allow large number of watchers
 
 - To see how many watchers per user are:
-```bash
+```shell
 cat /proc/sys/fs/inotify/max_user_watches
 ```
 - To set how many watchers per user:
-```bash
+```shell
 sudo nano /etc/sysctl.conf
 # go to the line: fs.inotify.max_user_watches or go to the botton and type the number of watchers
 fs.inotify.max_user_watches=524288
