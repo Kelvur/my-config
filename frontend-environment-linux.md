@@ -242,6 +242,8 @@ Acquire {
 ssh-keygen -t ${PROTOCOL} -b ${BITS} -C "${EMAIL}"
 ```
 
+Copy the file `${KEY_FILE}.pub` in your settings account -> SSH Keys, or something similar
+
 ## Office Suite
 ### Install Office Suite
 ```shell
