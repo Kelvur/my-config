@@ -257,7 +257,7 @@ sudo apt install libreoffice
 ```
 mkdir workspace
 ```
-- Is good to keep this folder sorted, one option is create subfolders with categories, as:
+- Is good to keep this folder sorted, one option is to create subfolders with categories, as:
 ```shell
 /workspace
   /${MYSELF}
@@ -287,7 +287,3 @@ fs.inotify.max_user_watches=524288
 # save and load the value to make it effective
 sudo sysctl -p
 ```
-
-
-// APT PROXY
-
