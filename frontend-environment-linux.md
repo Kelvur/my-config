@@ -51,6 +51,7 @@ sudo apt-get install git
 git config --global user.name "${USER}"
 git config --global user.email "${EMAIL}"
 git config --global core.autocrlf false
+git config --global push.default current
 ```
 
 ### Show current branch in the terminal
