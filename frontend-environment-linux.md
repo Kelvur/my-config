@@ -210,6 +210,31 @@ alias myvpn='sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN 
 - Go to: `Settings -> Network -> Network Proxy`
 - Choose `Automatic` and type the proxy URL
 
+### APT Proxy
+
+This step is not necessary if you don't work behind a proxy
+
+Apt don't use the OS proxy, you have to configurate it again
+
+- Go to `/ect/apt/apt.config.d/`
+```shell
+cd /ect/apt/apt.config.d/
+```
+
+- Open the file `proxy.conf`
+```shell
+sudo nano proxy.conf
+```
+
+- Write the following:
+```shell
+Acquire {
+  HTTP::proxy "http://server.com:port";
+  HTTPS::proxy "http://server.com:port";
+}
+```
+
+
 ## Git Repository
 ### Create private/public keys for the git repository
 
