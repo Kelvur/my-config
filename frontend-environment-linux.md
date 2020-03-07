@@ -148,6 +148,12 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 nvm install ${NODE VERSION}
 ```
 
+### Change default node with NVM
+
+```shell
+nvm alias current ${NODE_VERSION}
+```
+
 ## Npm
 ### Configure Npm
 
