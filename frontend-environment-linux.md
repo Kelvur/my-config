@@ -99,7 +99,9 @@ Go to `File -> Preferences -> Settings -> {}` and replace it with:
     "workbench.colorTheme": "Monokai",
     "diffEditor.ignoreTrimWhitespace": true,
     "window.zoomLevel": 1,
-    "eslint.autoFixOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 
     "jenkins.pipeline.linter.connector.url": "https://jenkins.corp/pipeline-model-converter/validate", // Just a example URL
     "jenkins.pipeline.linter.connector.user": "${USER}",
