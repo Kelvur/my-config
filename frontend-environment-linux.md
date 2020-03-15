@@ -114,8 +114,23 @@ Go to `File -> Preferences -> Keyboard Shortcuts -> {}` and replace it with:
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "ctrl+[Backslash]",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+7",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
         "key": "ctrl+d",
         "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     }
 ]
