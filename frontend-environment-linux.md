@@ -54,6 +54,13 @@ git config --global core.autocrlf false
 git config --global push.default current
 ```
 
+### Configure Git Repository
+```shell
+# Only if you want use SSH login but not a SSH Key and also don't write your credentials each time
+# INSECURE!, Your credentials can be stolen from someone if they has access to your computer
+git config credential.helper = 'store'
+```
+
 ### Show current branch in the terminal
 
 Copy in the file `.bashrc` the next function, copy it before the line `if [ -n "$force_color_prompt" ]; then`
