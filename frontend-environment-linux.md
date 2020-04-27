@@ -25,6 +25,8 @@ sudo apt-get dist-upgrade
     * [Change default node with NVM](#change-default-node-with-nvm)
 1. [Npm](#npm)
     * [Configure Npm](#configure-npm)
+1. [Go](#go)
+    * [Install Go](#install-go)
 1. [Vpn](#vpn)
     * [Install Openconnect](#install-openconnect)
     * [Connect with Openconnect](#connect-with-openconnect)
@@ -201,6 +203,41 @@ https-proxy=http://proxy.company.domain/index.pac
 cafile=/certs/company.pem
 # Registry
 registry=https://nexus.company.domain/repository/npm-group/
+```
+
+## Go
+### Install Go
+
+Go to [link](https://golang.org/dl/)
+```
+https://golang.org/dl/
+```
+
+Download the linux `tar.gz`, Example:
+```
+https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
+```
+
+Execute the following:
+```
+sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+# Example sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
+```
+
+Execute the following in `$HOME`:
+```bash
+mkdir bin
+```
+
+There it's a file named `.profile` in your `$HOME`; Append the following to that file:
+```sh
+export PATH=$PATH:/usr/local/go/bin
+
+export GOPATH=$HOME
+
+export GOBIN=$GOPATH/bin
+
+export PATH=$PATH:$GOBIN
 ```
 
 ## Vpn
