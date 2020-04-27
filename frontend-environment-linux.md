@@ -1,7 +1,7 @@
 # Linux Setup for Front-End Development
 
 Before start this guide check for updates
-```shell
+```bash
 sudo apt-get update
 sudo apt-get dist-upgrade
 ```
@@ -47,12 +47,12 @@ sudo apt-get dist-upgrade
 
 ## Git
 ### Install git
-```shell
+```bash
 sudo apt-get install git
 ```
 
 ### Configure git
-```shell
+```bash
 git config --global user.name "${USER}"
 git config --global user.email "${EMAIL}"
 git config --global core.autocrlf false
@@ -60,7 +60,7 @@ git config --global push.default current
 ```
 
 ### Configure Git Repository
-```shell
+```bash
 # Only if you want use SSH login but not a SSH Key and also don't write your credentials each time
 # INSECURE!, Your credentials can be stolen from someone if they has access to your computer
 git config credential.helper = 'store'
@@ -70,7 +70,7 @@ git config credential.helper = 'store'
 
 Copy in the file `.bashrc` the next function, copy it before the line `if [ -n "$force_color_prompt" ]; then`
 
-```shell
+```bash
 # add git branch if its present to PS1
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -78,7 +78,7 @@ parse_git_branch() {
 ```
 
 Replace the asignament of `PS1` by:
-```shell
+```bash
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 ```
 
@@ -164,7 +164,7 @@ Go to `File -> Preferences -> Keyboard Shortcuts -> {}` and replace it with:
 https://github.com/nvm-sh/nvm
 ```
 - In the step of installation copy the `wget` command, Example:
-```shell
+```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 - Paste it in the console
@@ -172,13 +172,13 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 ### Install Node and Npm with Nvm
 
-```shell
+```bash
 nvm install ${NODE VERSION}
 ```
 
 ### Change default node with NVM
 
-```shell
+```bash
 nvm alias current ${NODE_VERSION}
 ```
 
@@ -187,14 +187,14 @@ nvm alias current ${NODE_VERSION}
 
 - Open the console, `Ctrl + Alt + t`
 - Create the file `.npmrc` in `HOME`
-```shell
+```bash
 touch .npmrc
 ```
 - Add the configurations necessary for you, Example:
-```shell
+```bash
 nano .npmrc
 ```
-```
+```bash
 # Proxy
 proxy=http://proxy.company.domain/index.pac
 https-proxy=http://proxy.company.domain/index.pac
@@ -218,7 +218,7 @@ https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
 ```
 
 Execute the following:
-```
+```bash
 sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 # Example sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
 ```
@@ -229,7 +229,7 @@ mkdir bin
 ```
 
 There it's a file named `.profile` in your `$HOME`; Append the following to that file:
-```sh
+```bash
 export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME
@@ -241,12 +241,12 @@ export PATH=$PATH:$GOBIN
 
 ## Vpn
 ### Install Openconnect
-```shell
+```bash
 sudo apt-get install openconnect
 ```
 
 ### Connect with Openconnect
-```shell
+```bash
 sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}
 ```
 ### Alias for Openconnect
@@ -254,15 +254,15 @@ Make alias of the command, so you don't have to type every time you want to conn
 
 - Open the console, `Ctrl + Alt + t`
 - If the file `.bash_aliases` don't exists, create it
-```shell
+```bash
 touch .bash_aliases
 ```
 - Open `.bash_aliases`
-```shell
+```bash
 nano .bash_aliases
 ```
 - Paste the following:
-```shell
+```bash
 alias myvpn='sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}'
 ```
 - Save
@@ -280,17 +280,17 @@ This step is not necessary if you don't work behind a proxy
 Apt don't use the OS proxy, you have to configurate it again
 
 - Go to `/ect/apt/apt.config.d/`
-```shell
+```bash
 cd /ect/apt/apt.config.d/
 ```
 
 - Open the file `proxy.conf`
-```shell
+```bash
 sudo nano proxy.conf
 ```
 
 - Write the following:
-```shell
+```bash
 Acquire {
   HTTP::proxy "http://server.com:port";
   HTTPS::proxy "http://server.com:port";
@@ -301,7 +301,7 @@ Acquire {
 ## Git Repository
 ### Create private/public keys for the git repository
 
-```shell
+```bash
 ssh-keygen -t ${PROTOCOL} -b ${BITS} -C "${EMAIL}"
 ```
 
@@ -309,7 +309,7 @@ Copy the file `${KEY_FILE}.pub` in your settings account -> SSH Keys, or somethi
 
 ## Office Suite
 ### Install Office Suite
-```shell
+```bash
 sudo apt install libreoffice
 ```
 
@@ -317,11 +317,11 @@ sudo apt install libreoffice
 ### Create *workspace* folder
 
 - Generelly created in `HOME`
-```
+```bash
 mkdir workspace
 ```
 - Is good to keep this folder sorted, one option is to create subfolders with categories, as:
-```shell
+```bash
 /workspace
   /${MYSELF}
   /company
@@ -339,11 +339,11 @@ mkdir workspace
 ### Allow large number of watchers
 
 - To see how many watchers per user are:
-```shell
+```bash
 cat /proc/sys/fs/inotify/max_user_watches
 ```
 - To set how many watchers per user:
-```shell
+```bash
 sudo nano /etc/sysctl.conf
 # go to the line: fs.inotify.max_user_watches or go to the botton and type the number of watchers
 fs.inotify.max_user_watches=524288
