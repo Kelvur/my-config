@@ -113,9 +113,8 @@ Go to `File -> Preferences -> Settings -> {}` and replace it with:
     "window.zoomLevel": 1,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    }
-
-    "jenkins.pipeline.linter.connector.url": "https://jenkins.corp/pipeline-model-converter/validate", // Just a example URL
+    },
+    "jenkins.pipeline.linter.connector.url": "https://jenkins.corp/pipeline-model-converter/validate",
     "jenkins.pipeline.linter.connector.user": "${USER}",
     "jenkins.pipeline.linter.connector.pass": "${PASS}",
 }
