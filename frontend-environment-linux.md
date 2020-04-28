@@ -152,8 +152,10 @@ Go to `File -> Preferences -> Keyboard Shortcuts -> {}` and replace it with:
 - Color Highlight
 - EditorConfig for VS Code
 - ESLint
-- SVG Viewer
+- Go
+- Highlight Matching Tag
 - Jenkins Pipeline Linter Connector
+- SVG Viewer
 
 
 ## Nvm
