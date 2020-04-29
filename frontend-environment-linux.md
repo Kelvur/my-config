@@ -107,16 +107,18 @@ https://code.visualstudio.com/
 Go to `File -> Preferences -> Settings -> {}` and replace it with:
 ```json
 {
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Monokai",
     "diffEditor.ignoreTrimWhitespace": true,
-    "window.zoomLevel": 1,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "editor.fontLigatures": true,
+    "extensions.ignoreRecommendations": true,
+    "jenkins.pipeline.linter.connector.pass": "${PASS}",
+    "jenkins.pipeline.linter.connector.strictssl": false,
     "jenkins.pipeline.linter.connector.url": "https://jenkins.corp/pipeline-model-converter/validate",
     "jenkins.pipeline.linter.connector.user": "${USER}",
-    "jenkins.pipeline.linter.connector.pass": "${PASS}",
+    "workbench.colorTheme": "Monokai",
+    "workbench.startupEditor": "newUntitledFile"
 }
 ```
 
