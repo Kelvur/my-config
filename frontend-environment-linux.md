@@ -227,19 +227,24 @@ sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 # Example sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
 ```
 
+The following steps are necesary if when you execute `go get` get a error.
+
 Execute the following in `$HOME`:
 ```bash
+# Create a bin file where GO will install what you need
 mkdir bin
 ```
 
 There it's a file named `.profile` in your `$HOME`; Append the following to that file:
 ```bash
+# Add the binaries of GO to $PATH
 export PATH=$PATH:/usr/local/go/bin
-
+# Stablish the GOPATH as HOME, so all the projects under
+# HOME can use the GO utilities
 export GOPATH=$HOME
-
+# Stablish GOBIN
 export GOBIN=$GOPATH/bin
-
+# Also add GOBIN to PATH 
 export PATH=$PATH:$GOBIN
 ```
 
