@@ -2,7 +2,7 @@
 
 ## Reason
 
-If your company has a proxy you have to configurate it so you can access internet
+If your company has a proxy you have to configurate one so you can access internet
 
 ## How To
 
