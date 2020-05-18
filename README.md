@@ -14,3 +14,9 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 1. [Workspace Folder](guides/workspace.md)
 1. [Set Number of Watchers](guides/set_watchers.md)
 1. [Miscelaneous](guides/ubuntu_miscelaneous.md)
+
+### Useful Programns
+
+1. [Google Chrome](guides/chrome.md)
+1. [VS Code](guides/vs_code.md)
+1. [Libre Office](guides/office.md)
