@@ -20,3 +20,9 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 1. [Google Chrome](guides/chrome.md)
 1. [VS Code](guides/vs_code.md)
 1. [Libre Office](guides/office.md)
+
+### Git
+
+1. [Install](guides/git_install.md)
+1. [Config](guides/git_config.md)
+1. [SSH Config](guides/git_ssh_config.md)
