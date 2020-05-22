@@ -6,7 +6,7 @@ This folder structure help you to maintaing your projects sorted and to add conf
 
 ## How To
 
-- Generelly created in `$HOME`
+- Generally created in `$HOME`
 
 ```bash
 mkdir workspace

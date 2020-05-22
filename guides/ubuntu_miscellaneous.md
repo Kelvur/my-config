@@ -1,4 +1,4 @@
-# Ubuntu Miscelaneous
+# Ubuntu Miscellaneous
 
 ## Reason
 

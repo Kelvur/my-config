@@ -3,7 +3,7 @@
 ## Reason
 
 You had to add some configuration to git as user and email.
-This guide will show how to have multiple git configurations for diferent folders and subfolders. However, exists a more simple way, just adding a global config for all the projects.
+This guide will show how to have multiple git configurations for diferent folders and subfolders. However, exists a more simple way if you has the same configuration for all the projects, just adding a global configuration.
 
 ## How To
 
@@ -22,10 +22,10 @@ If the file `.gitconfig` doesn't exist create it
 touch .gitconfig
 ```
 
-Open the file `.gitignore`
+Open the file `.gitconfig`
 
 ```bash
-nano .gitignore
+nano .gitconfig
 ```
 
 If you have the same definition for all the posibles configurations add it to the first part of this file, example:
@@ -40,7 +40,7 @@ If you have the same definition for all the posibles configurations add it to th
 
 For each configuration you want add a block like this:
 
-- This may no have sense to you now, please week reading the guide.
+- This may no have sense to you now, please keep reading this guide.
 
 ```
 [includeIf "gitdir:~/workspace/${YOURSELF}/"]
@@ -94,9 +94,9 @@ Open the file and add the configuration you like. Example:
 
 ### Remember Credentials
 
-Only if you want use SSH login but not a SSH Key and also don't write your credentials each time
+Only if you want use HTTPS and don't write your credentials each time
 INSECURE!, Your credentials can be stolen from someone if they has access to your computer
 
 ```bash
-git config credential.helper = 'store'
+git config credential.helper 'store'
 ```

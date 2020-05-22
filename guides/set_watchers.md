@@ -2,9 +2,9 @@
 
 ## Reason
 
-When working with some IDE or development tool which watch a folder in search from changes will make reach the limit of watchers really easy; So, you may want to put a higher limit of watchers in your SO
+When working with some IDE or development tool which watch a folder in search from changes will make reach the limit of watchers really easy; So, you may want to put a higher limit of watchers in your OS
 
-## Hot To
+## How To
 
 ### Show how many watchers per user are:
 

@@ -20,7 +20,7 @@ sudo openconnect --usergroup=${USER GROUP} --passwd-on-stdin ${VPN URL}
 
 ### Alias for Openconnect
 
-Make alias of the command, so you don't have to type it every time you want to connect to the VPN
+Make alias of the command, so you don't have to type the command every time you want to connect to the VPN
 
 - Open a console
 - If the file `.bash_aliases` don't exists in `$HOME` create it
