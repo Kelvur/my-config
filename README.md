@@ -32,3 +32,7 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 1. [MVN](guides/mvn.md)
 1. [Install NodeJS and NPM](guides/install_nodejs.md)
 1. [Configurate NPM](guides/config_npm.md)
+
+### Go Language
+
+1. [Install](guides/install_go.md)
