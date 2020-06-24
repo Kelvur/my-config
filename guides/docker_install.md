@@ -62,6 +62,15 @@ sudo add-apt-repository \
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
+### Add your user to the docker group
+
+If you want to use docker and don't relay in `sudo` one way to do it is add your user to the docker group
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+
 ### Verify that Docker Engine is installed
 
 ```bash
