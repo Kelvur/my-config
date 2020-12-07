@@ -84,4 +84,5 @@ List of useful extensions
 - Go
 - Highlight Matching Tag
 - Jenkins Pipeline Linter Connector
+- Markdown All in One
 - SVG Viewer
