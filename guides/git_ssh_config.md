@@ -3,7 +3,7 @@
 ## Reason
 
 It's handy delegate the authentication to SSH, so you don't have to type your user and passwork in each push.
-This guide shows how to have multiple keys for direfent git servers
+This guide shows how to have multiple keys for different git servers
 
 ## How To
 
