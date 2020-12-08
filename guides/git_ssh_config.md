@@ -42,7 +42,7 @@ Host github github.com
 
 ### Multiple Git Accounts in the Same Host
 
-If you have multiple accounts in the same git server, here is how you can configurate multiple ssk keys for each one.
+If you have multiple accounts in the same git server, here is how you can configurate multiple ssh keys for each one.
 - Remove the NAME in the `Host` line
 - Add a hyphen(-) followed of the USERNAME after the URL
 
