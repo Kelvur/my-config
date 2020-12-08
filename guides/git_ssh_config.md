@@ -49,15 +49,15 @@ If you have multiple accounts in the same git server, here is how you can config
 Example
 
 ```bash
-Host github.com-bob
-    HostName github.com
-    IdentityFile ~/.ssh/id_rsa_bob
-    User bob
-
 Host github.com-alice
     HostName github.com
     IdentityFile ~/.ssh/id_rsa_alice
     User alice
+
+Host github.com-bob
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa_bob
+    User bob
 ```
 
 ### Create a pair of keys
