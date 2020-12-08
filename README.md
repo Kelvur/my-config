@@ -10,17 +10,18 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 1. [Setup Proxy](guides/proxy.md)
 1. [APT Proxy](guides/apt_proxy.md)
 1. [Update the Software](guides/update.md)
-2. [cURL and wget](guides/curl_wget.md)
-3. [VPN](guides/vpn.md)
-4. [Workspace Folder](guides/workspace.md)
-5. [Set Number of Watchers](guides/set_watchers.md)
-6. [Miscellaneous](guides/ubuntu_miscellaneous.md)
+1. [cURL and wget](guides/curl_wget.md)
+1. [VPN](guides/vpn.md)
+1. [Workspace Folder](guides/workspace.md)
+1. [Set Number of Watchers](guides/set_watchers.md)
+1. [Miscellaneous](guides/ubuntu_miscellaneous.md)
 
 ### Useful Programns
 
 1. [Google Chrome](guides/chrome.md)
 1. [VS Code](guides/vs_code.md)
 1. [Libre Office](guides/office.md)
+1. [Joplin](guides/joplin.md)
 
 ### Git
 
