@@ -40,6 +40,26 @@ Host github github.com
     User Kelvur
 ```
 
+### Multiple Git Accounts in the Same Host
+
+If you have multiple accounts in the same git server, here is how you can configurate multiple ssk keys for each one.
+- Remove the NAME in the `Host` line
+- Add a hyphen(-) followed of the USERNAME after the URL
+
+Example
+
+```bash
+Host github.com-bob
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa_bob
+    User bob
+
+Host github.com-alice
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa_alice
+    User alice
+```
+
 ### Create a pair of keys
 
 Execute:
