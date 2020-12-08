@@ -33,7 +33,7 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 
 ### NodeJS and NPM
 
-1. [MVN](guides/mvn.md)
+1. [NVM](guides/nvm.md)
 1. [Install NodeJS and NPM](guides/install_nodejs.md)
 1. [Configurate NPM](guides/config_npm.md)
 
