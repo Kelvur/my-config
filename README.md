@@ -16,6 +16,10 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 1. [Set Number of Watchers](guides/set_watchers.md)
 1. [Miscellaneous](guides/ubuntu_miscellaneous.md)
 
+### Terminal
+
+1. [Bash Aliases](guides/bash_aliases.md)
+
 ### Useful Programns
 
 1. [Google Chrome](guides/chrome.md)
