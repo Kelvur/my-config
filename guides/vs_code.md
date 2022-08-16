@@ -29,16 +29,24 @@ Go to `File -> Preferences -> Settings -> Open Settings(JSON)` and replace what 
 
 ```json
 {
+    "cSpell.language": "en,es",
     "diffEditor.ignoreTrimWhitespace": true,
+    "editor.bracketPairColorization.enabled": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
     "editor.fontLigatures": true,
+    "editor.guides.bracketPairs": true,
+    "editor.inlineSuggest.enabled": true,
     "extensions.ignoreRecommendations": true,
-    "jenkins.pipeline.linter.connector.pass": "${PASS}",
-    "jenkins.pipeline.linter.connector.strictssl": false,
-    "jenkins.pipeline.linter.connector.url": "https://jenkins.corp/pipeline-model-converter/validate",
-    "jenkins.pipeline.linter.connector.user": "${USER}",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "jestrunner.codeLensSelector": "**/*.{test,spec,serial-test}.{js,jsx,ts,tsx}",
+    "search.followSymlinks": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "timeline.excludeSources": [
+        "timeline.localHistory"
+    ],
+    "window.zoomLevel": 2,
     "workbench.colorTheme": "Monokai",
     "workbench.startupEditor": "newUntitledFile"
 }
