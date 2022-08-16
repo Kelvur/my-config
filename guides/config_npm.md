@@ -2,7 +2,7 @@
 
 ## Reason
 
-Maybe you need point to a registry, configurate a proxy, add a certificate authority, ...
+Maybe you need point to a registry, configure a proxy, add a certificate authority, ...
 
 ## How To
 

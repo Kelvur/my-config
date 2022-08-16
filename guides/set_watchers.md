@@ -17,7 +17,7 @@ cat /proc/sys/fs/inotify/max_user_watches
 ```bash
 sudo nano /etc/sysctl.conf
 ```
-- Go to the line `fs.inotify.max_user_watches` or go to the botton and type the number of watchers
+- Go to the line `fs.inotify.max_user_watches` or go to the bottom and type the number of watchers
 
 ```bash
 fs.inotify.max_user_watches=524288

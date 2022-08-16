@@ -27,7 +27,7 @@ sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 # Example sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
 ```
 
-The following steps are necesary if when you execute `go get` get an error.
+The following steps are necessary if when you execute `go get` get an error.
 
 Execute the following in `$HOME`:
 

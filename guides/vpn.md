@@ -2,7 +2,7 @@
 
 ## Reason
 
-If you work from home maybe you has to configurate a VPN to access the intranet of your company
+If you work from home maybe you has to configure a VPN to access the intranet of your company
 
 ## How To
 

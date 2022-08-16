@@ -3,7 +3,7 @@
 ## Reason
 
 You had to add some configuration to git as user and email.
-This guide will show how to have multiple git configurations for diferent folders and subfolders. However, exists a more simple way if you has the same configuration for all the projects, just adding a global configuration.
+This guide will show how to have multiple git configurations for different folders and subfolders. However, exists a more simple way if you has the same configuration for all the projects, just adding a global configuration.
 
 ## How To
 

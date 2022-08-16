@@ -38,7 +38,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 ```
 
-You should be looking to somenthing like this:
+You should be looking to something like this:
 
 ```bash
 pub   rsa4096 2017-02-22 [SCEA]

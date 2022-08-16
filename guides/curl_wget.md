@@ -2,7 +2,7 @@
 
 ## Reason
 
-It's handy have installed cURL and wget in your machine, they will help you from download content to test an enpoint.
+It's handy have installed cURL and wget in your machine, they will help you from download content to test an endpoint.
 
 ## How To
 

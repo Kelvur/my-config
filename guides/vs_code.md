@@ -46,7 +46,7 @@ Go to `File -> Preferences -> Settings -> Open Settings(JSON)` and replace what 
 
 ### Configure Shortcuts
 
-Go to `File -> Preferences -> Keyboard Shortcuts -> Open Keyboard Shortcuts(JSON)` and replace what you see for thit:
+Go to `File -> Preferences -> Keyboard Shortcuts -> Open Keyboard Shortcuts(JSON)` and replace what you see for this:
 
 ```json
 // Place your key bindings in this file to override the defaultsauto[]

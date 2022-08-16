@@ -2,7 +2,7 @@
 
 ## Reason
 
-APT doesn't use the proxy configurated in the OS, so it's probably you need to add some configuration if you work in a intranet
+APT doesn't use the proxy configured in the OS, so it's probably you need to add some configuration if you work in a intranet
 
 ## How To
 
