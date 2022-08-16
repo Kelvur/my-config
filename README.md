@@ -1,6 +1,6 @@
 # My Config Files/Guides
 
-Hi, the guides of this repository aim to help me configurating the computer I use for programming, but maybe they can help you too.
+Hi, the guides of this repository aim to help me configuring the computer I use for programming, but maybe they can help you too.
 
 
 ## Guides
@@ -20,7 +20,7 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 
 1. [Bash Aliases](guides/bash_aliases.md)
 
-### Useful Programns
+### Useful Programs
 
 1. [Google Chrome](guides/chrome.md)
 1. [VS Code](guides/vs_code.md)
@@ -41,7 +41,7 @@ Hi, the guides of this repository aim to help me configurating the computer I us
 
 1. [NVM](guides/nvm.md)
 1. [Install NodeJS and NPM](guides/install_nodejs.md)
-1. [Configurate NPM](guides/config_npm.md)
+1. [Configure NPM](guides/config_npm.md)
 
 ### Go Language
 

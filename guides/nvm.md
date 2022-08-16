@@ -2,7 +2,7 @@
 
 ## Reason
 
-To be able to use diferent NodeJS versions in the same computer one solution is use NVM
+To be able to use different NodeJS versions in the same computer one solution is use NVM
 
 ## How To
 

@@ -2,7 +2,7 @@
 
 ## Reason
 
-This folder structure help you to maintaing your projects sorted and to add configuration to some folders exclusively
+This folder structure help you to maintain your projects sorted and to add configuration to some folders exclusively
 
 ## How To
 
