@@ -37,3 +37,16 @@ Write there your alias, example:
 ```bash
 alias st='npm start'
 ```
+
+### Useful aliases
+
+This is a list of useful aliases which I use:
+
+```bash
+# This alias allows to use sudo with other alias
+alias sudo='sudo '
+
+# This alias open the current folder in the GUI, It works in Ubuntu, I don't know if the same
+# alias works in other distros
+alias open='xdg-open .'
+```
