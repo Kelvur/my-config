@@ -33,6 +33,7 @@ If you have the same definition for all the posibles configurations add it to th
 ```
 [core]
 	autocrlf = false
+	hookspath = .githooks
 
 [push]
 	default = current
