@@ -29,26 +29,32 @@ Go to `File -> Preferences -> Settings -> Open Settings(JSON)` and replace what 
 
 ```json
 {
-    "cSpell.language": "en,es",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "editor.fontLigatures": true,
-    "editor.guides.bracketPairs": true,
-    "editor.inlineSuggest.enabled": true,
-    "extensions.ignoreRecommendations": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "jestrunner.codeLensSelector": "**/*.{test,spec,serial-test}.{js,jsx,ts,tsx}",
-    "search.followSymlinks": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "timeline.excludeSources": [
-        "timeline.localHistory"
-    ],
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "Monokai",
-    "workbench.startupEditor": "newUntitledFile"
+	"cSpell.language": "en,es",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.fontLigatures": true,
+	"editor.guides.bracketPairs": true,
+	"editor.inlineSuggest.enabled": true,
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	],
+	"extensions.ignoreRecommendations": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"jestrunner.codeLensSelector": "**/*.{test,spec,serial-test}.{js,jsx,ts,tsx}",
+	"livePreview.defaultPreviewPath": "Untitled-1",
+	"search.followSymlinks": false,
+	"security.workspace.trust.untrustedFiles": "open",
+	"timeline.excludeSources": [
+		"timeline.localHistory"
+	],
+	"window.zoomLevel": 2,
+	"workbench.colorTheme": "Monokai",
+	"workbench.startupEditor": "newUntitledFile"
 }
 ```
 
@@ -94,3 +100,8 @@ List of useful extensions
 - Jenkins Pipeline Linter Connector
 - Markdown All in One
 - SVG Viewer
+- Code Spell Checker
+- Spanish - Code Spell Checker
+- Coverage Gutters
+- Jest Runner
+- shell-format
