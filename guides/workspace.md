@@ -14,7 +14,7 @@ mkdir workspace
 
 - Create all the subfolders you want, example:
 
-```bash
+```
 /workspace
   /${YOURSELF}
   /company
